@@ -1,15 +1,16 @@
 # Python Mini Projects Collection
 
-A collection of three interactive command-line Python projects built to practice programming fundamentals, database connectivity, and logic building. This repository includes a Banking Software with database integration, an Area Calculator for 2D/3D shapes, and a Game Store Shopping Cart with automatic tax and discount calculation.
+A collection of interactive command-line and graphical Python projects built to practice programming fundamentals, database connectivity, GUI development, and logic building. This repository includes a Banking Software with database integration, an Area Calculator for 2D/3D shapes, a Game Store Shopping Cart, and a Tkinter-based GUI Calculator.
 
 ---
 
 ## Project Overview
 
-This repository is split into three main modules:
+This repository is split into four main modules:
 1. **Banking Software (`/bank`)**: A database-driven console application that allows users to create bank accounts, search user details, deposit money, and close accounts. It connects directly to a MySQL database to store and manage information.
 2. **Area Calculator (`/basic_calculator`)**: A simple program to quickly calculate the area of different shapes like Circles, Squares, Rectangles, Cubes, and Cuboids based on user input.
 3. **Ryzen Game Store (`/shopping_cart`)**: An interactive shopping cart simulation of a gaming store where users can choose from a list of popular games, purchase multiple copies, and get an itemized bill showing applied discounts and GST charges.
+4. **GUI Calculator (`/calculator`)**: A graphical desktop application built using Tkinter that performs basic arithmetic operations (addition, subtraction, multiplication, division) through a user-friendly interface.
 
 ---
 
@@ -38,49 +39,18 @@ This repository is split into three main modules:
 * **Tax Calculation**: Applies an 18% GST (split into 9% SGST and 9% CGST) on the discounted price.
 * **Bill**: Displays original price, discounts, taxes, and final payable amount.
 
+### 4. GUI Calculator
+* **User-friendly Interface**: Clean desktop window built with Python's standard `tkinter` library.
+* **Core Arithmetic Operations**: Quick buttons to perform Addition, Subtraction, Multiplication, and Division.
+
 ---
 
 ## Technologies Used
 
 * **Language**: Python 3
+* **GUI Framework**: Tkinter (for GUI Calculator)
 * **Database**: MySQL (for the Banking project)
 * **Libraries**: `mysql-connector-python` (used to link Python and MySQL)
-
----
-
-## How to Setup and Run
-
-### Prerequisites
-Make sure you have Python installed. If you want to run the Banking project, ensure you have a MySQL server running (e.g., via XAMPP or MySQL Installer) and install the MySQL connector for Python:
-```bash
-pip install mysql-connector-python
-```
-
-### Steps to Run
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/sahilstacks/python_project.git
-   cd python_project
-   ```
-
-2. **Setup the Database (for Banking Software)**:
-   * Open your MySQL client (like phpMyAdmin or MySQL CLI).
-   * Create a database named `bank_py`.
-   * Create the `account` and `amt` tables using the database schema detailed above.
-
-3. **Running the Programs**:
-   * To run the Banking System:
-     ```bash
-     python bank/bank_.py
-     ```
-   * To run the Area Calculator:
-     ```bash
-     python basic_calculator/basic_area_calculator.py
-     ```
-   * To run the Shopping Cart:
-     ```bash
-     python shopping_cart/shopping_cart.py
-     ```
 
 ---
 
@@ -89,3 +59,4 @@ pip install mysql-connector-python
 * **Input Validation**: Add robust error handling to prevent crashes when users enter letters instead of numbers.
 * **Database Updates for Shopping Cart**: Save the Ryzen Store inventory and order logs in a MySQL database instead of hardcoding items in Python.
 * **Withdrawal Feature**: Add a cash withdrawal option to the Banking module that updates and checks account balance before debiting.
+* **Calculator Enhancement**: Add support for advanced mathematical operations (modulus, power, square root, etc.) and keyboard shortcuts to the GUI Calculator.
